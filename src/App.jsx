@@ -3,6 +3,7 @@ import LandingPage from "./Pages/LandingPage"
 import LoginPage from "./Pages/LoginPage"
 import SignUpPage from "./Pages/SignUpPage"
 import ForgotPage from "./Pages/ForgotPage"
+import ChatBot from "./Pages/ChatBot"
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
       <Route path='/login' element={<LoginPage/>} ></Route>
       <Route path='/signup' element={<SignUpPage/>} ></Route>
       <Route path='/forgot-password' element={<ForgotPage/>} ></Route>
+      <Route path='/chatbot' element={<ChatBot/>} ></Route>
+
       </Routes>
       </BrowserRouter>
     </>
