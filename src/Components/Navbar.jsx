@@ -1,9 +1,11 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { FaAngleRight } from "react-icons/fa6";
 import { Link } from "react-scroll";
 
 function Navbar() {
+  const navigate =useNavigate();
   return (
+
     <div className="flex justify-between items-center h-24 px-8 md:px-16 mb-6 py-3 mx-auto">
       <div className="text-2xl font-bold text-white">Legal Mind Assist</div>
 
@@ -62,7 +64,7 @@ function Navbar() {
         </li>
       </ul>
 
-      <button className="flex items-center gap-3 py-2 px-6 rounded-full bg-white text-black font-semibold text-sm md:text-lg">
+      <button onClick={()=>navigate('/chatbot')} className="flex items-center gap-3 py-2 px-6 rounded-full bg-white text-black font-semibold text-sm md:text-lg">
         Get Started
         <FaAngleRight className="text-black text-2xl" />
       </button>

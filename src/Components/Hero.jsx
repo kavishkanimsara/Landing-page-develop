@@ -2,8 +2,10 @@ import React from "react";
 import HeroImage from "../assets/hero.png";
 import { FaAngleRight } from "react-icons/fa6";
 import Text from "./Text";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate =useNavigate();
   return (
     <div className="min-h-screen bg-black">
       <div>
@@ -21,7 +23,7 @@ const Hero = () => {
               </p>
             </div>
             <div className="flex mt-6">
-              <button className=" flex items-center gap-3 py-3 px-6 rounded-full bg-white text-black font-semibold text-sm md:text-lg">
+              <button onClick={()=>navigate('/chatbot')}  className=" flex items-center gap-3 py-3 px-6 rounded-full bg-white text-black font-semibold text-sm md:text-lg">
                 Get Started
                 <FaAngleRight className="text-black text-2xl" />
               </button>
